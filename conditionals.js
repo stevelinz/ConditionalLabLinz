@@ -120,112 +120,79 @@ $(document).ready(function () {
 
 
     }
-
-   function drawCard(event) {
-        event.preventDefault();
-   }
-
-      // $("#drawCardButton").on()
-
-        // $(function() {
-        //     $("#drawCardButton").on("click", function() {
-        //         //event handler
-        //         $("drawCardOutput").text(cardDisplay).val();
-        //     });
-
-     //   });
-
-        $("#drawCardButton").click(function() {
-          //  $("body").html(Date());
-            $("drawCardOutput").text("test");
-        });
-
-
-
-        // Generate a random card face value (1 - 13)
-        var faceValue = Math.floor(Math.random() * 13) + 1;
-
-        // Generate a random suit (1 - 4)
-        var suit = Math.floor(Math.random() * 4) + 1;
-
-
-        // Create the description of the card, for example
-        // "King of Spades" or "2 of Hearts"
-        var suitType, cardDisplay;
-        if(suit === 1) suitType = " Diamonds";
-        if(suit === 2) suitType = " Hearts";
-        if(suit === 3) suitType = " Spades";
-        if(suit === 4) suitType = " Clubs";
-
-       // var cat = parseInt($("#catAge").val());
-       //$("#drawCardButton").val();
-        //var cat = parseInt($("#catAge").val());
-       // $("drawCardOutput").text(cardIs ).val();
-
-        switch (faceValue) {
-            case 1:
-                cardDisplay = "ACE of"+ suitType ;
-                break;
-            case 2:
-                cardDisplay = "2 of"+ suitType;
-                break;
-            case 3:
-                cardDisplay = "3 of"+ suitType;
-                break;
-            case 4:
-                cardDisplay = "4 of"+ suitType;
-                break;
-            case 5:
-                cardDisplay = "5 of" + suitType;
-                break;
-            case 6:
-                cardDisplay = "6 or" + suitType;
-                break;
-            case 7:
-                cardDisplay = "7 of" + suitType;
-                break;
-            case 8:
-                cardDisplay = "8 of" + suitType;
-                break;
-            case 13:
-                cardDisplay = "9 of" + suitType;
-                break;
-            case 9:
-                cardDisplay = "10 of" + suitType;
-                break;
-            case 10:
-                cardDisplay = "Jack of" + suitType;
-                break;
-            case 11:
-                cardDisplay = "Queen of" + suitType;
-                break;
-            case 12:
-                cardDisplay = "King of" + suitType;
-                break;
-            default:
-                alert('error');
-        }
-
-
-
-        // For face values 2 - 10, you can just print the number
-        // Face value 1 is "Ace", 11 is "Jack", 12 is "Queen",
-        // and 13 is "King"
-
-        // For the suits, 1 is "Clubs", 2 is "Spades",
-        // 3 is "Hearts", 4 is "Diamonds"
-
-        // Print the card's description to the <p> with
-        // ID of "drawCardOutput"
-
-      //  $("drawCardOutput").text(cardDisplay).val();
-  //  }
-
-    ///////////////////
-
-
-
-   ////////////////////
-
-
 });
+
+
+
+function cardFunction() {
+
+
+
+// Generate a random card face value (1 - 13)
+    var faceValue = Math.floor(Math.random() * 13) + 1;
+
+// Generate a random suit (1 - 4)
+    var suit = Math.floor(Math.random() * 4) + 1;
+
+
+// Create the description of the card, for example
+// "King of Spades" or "2 of Hearts"
+    var suitType, cardDisplay;
+    if (suit === 1) suitType = " Diamonds";
+    if (suit === 2) suitType = " Hearts";
+    if (suit === 3) suitType = " Spades";
+    if (suit === 4) suitType = " Clubs";
+
+// var cat = parseInt($("#catAge").val());
+//$("#drawCardButton").val();
+//var cat = parseInt($("#catAge").val());
+// $("drawCardOutput").text(cardIs ).val();
+
+    switch (faceValue) {
+        case 1:
+            cardDisplay = "ACE of" + suitType;
+            break;
+        case 2:
+            cardDisplay = "2 of" + suitType;
+            break;
+        case 3:
+            cardDisplay = "3 of" + suitType;
+            break;
+        case 4:
+            cardDisplay = "4 of" + suitType;
+            break;
+        case 5:
+            cardDisplay = "5 of" + suitType;
+            break;
+        case 6:
+            cardDisplay = "6 or" + suitType;
+            break;
+        case 7:
+            cardDisplay = "7 of" + suitType;
+            break;
+        case 8:
+            cardDisplay = "8 of" + suitType;
+            break;
+        case 13:
+            cardDisplay = "9 of" + suitType;
+            break;
+        case 9:
+            cardDisplay = "10 of" + suitType;
+            break;
+        case 10:
+            cardDisplay = "Jack of" + suitType;
+            break;
+        case 11:
+            cardDisplay = "Queen of" + suitType;
+            break;
+        case 12:
+            cardDisplay = "King of" + suitType;
+            break;
+        default:
+            alert('error');
+    }
+
+    document.getElementById("cardDealt").innerHTML = cardDisplay;
+
+
+}
