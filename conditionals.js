@@ -121,59 +121,86 @@ $(document).ready(function () {
 
     }
 
-    function drawCard(event) {
+   function drawCard(event) {
         event.preventDefault();
+   }
+
+      // $("#drawCardButton").on()
+
+        // $(function() {
+        //     $("#drawCardButton").on("click", function() {
+        //         //event handler
+        //         $("drawCardOutput").text(cardDisplay).val();
+        //     });
+
+     //   });
+
+        $("#drawCardButton").click(function() {
+          //  $("body").html(Date());
+            $("drawCardOutput").text("test");
+        });
+
+
+
         // Generate a random card face value (1 - 13)
         var faceValue = Math.floor(Math.random() * 13) + 1;
 
         // Generate a random suit (1 - 4)
         var suit = Math.floor(Math.random() * 4) + 1;
 
+
         // Create the description of the card, for example
         // "King of Spades" or "2 of Hearts"
-        var description;
+        var suitType, cardDisplay;
+        if(suit === 1) suitType = " Diamonds";
+        if(suit === 2) suitType = " Hearts";
+        if(suit === 3) suitType = " Spades";
+        if(suit === 4) suitType = " Clubs";
 
-         var card = ($("#drawCardButton").val(faceValue));
+       // var cat = parseInt($("#catAge").val());
+       //$("#drawCardButton").val();
+        //var cat = parseInt($("#catAge").val());
+       // $("drawCardOutput").text(cardIs ).val();
 
-        switch (card) {
+        switch (faceValue) {
             case 1:
-                $("drawCardOutput").text("ACE");
+                cardDisplay = "ACE of"+ suitType ;
                 break;
             case 2:
-                $("drawCardOutput").text("2");
+                cardDisplay = "2 of"+ suitType;
                 break;
             case 3:
-                $("drawCardOutput").text("3");
+                cardDisplay = "3 of"+ suitType;
                 break;
             case 4:
-                $("drawCardOutput").text("4");
+                cardDisplay = "4 of"+ suitType;
                 break;
             case 5:
-                $("drawCardOutput").text("5");
+                cardDisplay = "5 of" + suitType;
                 break;
             case 6:
-                $("drawCardOutput").text("6");
+                cardDisplay = "6 or" + suitType;
                 break;
             case 7:
-                $("drawCardOutput").text("7");
+                cardDisplay = "7 of" + suitType;
                 break;
             case 8:
-                $("drawCardOutput").text("8");
+                cardDisplay = "8 of" + suitType;
                 break;
             case 13:
-                $("drawCardOutput").text("9");
+                cardDisplay = "9 of" + suitType;
                 break;
             case 9:
-                $("drawCardOutput").text("10");
+                cardDisplay = "10 of" + suitType;
                 break;
             case 10:
-                $("drawCardOutput").text("Jack");
+                cardDisplay = "Jack of" + suitType;
                 break;
             case 11:
-                $("drawCardOutput").text("Queen");
+                cardDisplay = "Queen of" + suitType;
                 break;
             case 12:
-                $("drawCardOutput").text("King");
+                cardDisplay = "King of" + suitType;
                 break;
             default:
                 alert('error');
@@ -191,7 +218,14 @@ $(document).ready(function () {
         // Print the card's description to the <p> with
         // ID of "drawCardOutput"
 
+      //  $("drawCardOutput").text(cardDisplay).val();
+  //  }
 
-    }
+    ///////////////////
+
+
+
+   ////////////////////
+
 
 });
